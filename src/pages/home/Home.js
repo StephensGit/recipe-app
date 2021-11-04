@@ -1,4 +1,4 @@
-import { useFetch } from '../../hooks/UseFetch';
+import { useFetch } from '../../hooks/useFetch';
 import RecipeList from '../../components/RecipeList';
 // import styles
 import './Home.css';
