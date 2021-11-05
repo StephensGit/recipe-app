@@ -9,8 +9,6 @@ export default function Home() {
     isPending,
   } = useFetch('http://localhost:3000/recipes');
 
-  console.log({ recipes });
-
   return (
     <div>
       {error && <p className='error'></p>}
