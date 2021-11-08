@@ -4,14 +4,14 @@ import { useTheme } from '../hooks/useTheme';
 // styles
 import './RecipeList.css';
 
-export default function RecipeList({ recipes }) {
+export default function RecipeList({ data }) {
   const { mode } = useTheme();
-  if (recipes.length === 0) {
+  if (data.length === 0) {
     return <div className='error'>No items found...</div>;
   }
   return (
     <div className='recipe-list'>
-      {recipes.map((recipe) => (
+      {data.map((recipe) => (
         <div key={recipe.id} className={`card ${mode}`}>
           <h3>{recipe.title}</h3>
           <p>{recipe.cookingTime} to make.</p>
