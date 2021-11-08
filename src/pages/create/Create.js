@@ -20,7 +20,7 @@ export default function Create() {
   //   'POST'
   // );
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const doc = {
       title,
@@ -30,7 +30,7 @@ export default function Create() {
     };
 
     try {
-      projectFirestore.collection('recipes').add(doc);
+      await projectFirestore.collection('recipes').add(doc);
     } catch (err) {
       console.log(err);
     }
